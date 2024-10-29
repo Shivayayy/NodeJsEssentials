@@ -1,7 +1,6 @@
-// server.js
-
 const express = require('express');
 const dotenv = require('dotenv');
+const createMongoDBConnection = require('../mongoose/mongooseConnection');
 
 // Load environment variables from .env file
 dotenv.config();
@@ -22,8 +21,9 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-const startServer = () => {
+const startServer = async() => {
     try {
+        await createMongoDBConnection();
         app.listen(PORT, () => {
             console.log(`🚀 Server is running on port ${PORT}`);
         });
