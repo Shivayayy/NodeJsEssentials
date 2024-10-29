@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Shivayayy/NodeJsEssentials#readme",
   "dependencies": {
     "dotenv": "^16.4.5",
-    "mongoose": "^8.7.3"
+    "mongoose": "^8.7.3",
+    "net": "^1.0.2"
   }
 }
